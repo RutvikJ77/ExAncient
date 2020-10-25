@@ -1,0 +1,76 @@
+<!--<!doctype html>
+    <title>Upload new File</title>
+    <h1>Upload new File</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=image>
+      <input type=submit value=Generate>
+      <br>
+      <h3>{{story}}</h3>
+    </form>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Arbitrary Style Transfer</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <!--BootStrap specific
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/@magenta/image@0.2.1/dist/magentaimage.min.js"></script>
+  
+    <script src="../static/js/script.js" defer></script>
+  </head> 
+
+  <body>    
+    <div class="container">
+      <div class="left">
+        <div class="frame">
+          <form  method=post enctype=multipart/form-data>
+          <h2>Your potrait<label>upload photo <input type=file name=image onchange="loadContent(event)"></label></h2>
+          <input type=submit value=Generate>
+        </form>
+          <img id="content" class="image" crossorigin="anonymous" src="../test/images/test1.jpg"/> 
+        </div>
+        <div class="right">
+          <div class="frame">
+            
+              <h2>Which painter do you wish for ? <label>upload style <input type=file onchange="loadStyle(event)"></label></h2>
+              <!-- Include in updates
+              <label for="stylish">or Choose a Style:</label>
+              <select name="stylish" id="stylish">
+                <option value="Munch">Scream</option>
+                <option value="Van Goh">Starry Night</option>
+                <option value="80s">Retro</option>
+                <option value="Da Vinci">Mona Lisa</option>
+              </select>
+              <br><br>
+              <input type="submit" value="Submit"> -->
+              <img id="style" class="image" crossorigin="anonymous" src="https://cdn.glitch.com/93893683-46da-4058-829c-a05792722f2b%2Fstyle.jpg?1545163447216" />
+              
+          </div>
+        </div>
+      </div> 
+      
+      <div class="frame">
+        <h2 class="dark">Getting your experience from <span id="loading">Past ...</span><span id="ready" hidden>Past!</span></h2>
+        <canvas id="stylized" height="250px"></canvas>
+        <form method=post enctype=multipart/form-data>
+        <h4 style='color:black'>A story about your experience</h4>
+        <p id = 'speak' class='passage'>{{story}}</p>
+        </form>
+
+        <!--For text to speech<button>Hear it</button>-->
+      </div>
+    </div>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=m0vi2wDt"></script>
+</body>
+</html>
