@@ -19,7 +19,7 @@ Take a look at how the past feels. ExAncient aims to provide a new experience in
 ![Result](/assets/result.png)
 
 ## How we built it
-Using the model which is loaded in the magneta.js we performed arbitrary neural style transfer on the user input images according to the style images. Using the user input images we further generate a story using the ![Neural storyteller model](https://github.com/ryankiros/neural-storyteller) by ryankiros everything is then linked to the Flask and presented to the user using the web frontend.
+Using the model which is loaded in the magneta.js we performed arbitrary neural style transfer on the user input images according to the style images. Using the user input images we further generate a story using the [Neural storyteller model](https://github.com/ryankiros/neural-storyteller) by ryankiros everything is then linked to the Flask and presented to the user using the web frontend.
 
 ## Challenges we ran into
 Nobody on the team knew about Flask so learning it was a steep curve. Developing connections for the model to work was tedious as well. Due to the time constraints, we lacked focus on the UI part which we will cover in our next iteration.
@@ -37,6 +37,6 @@ Improve the UI for the user and looking forward to dockerize it and deploy using
 
 
 Credits to 
-![Magenta.js](https://style-transfer.glitch.me/) and ![Neural storyteller model](https://github.com/ryankiros/neural-storyteller)
+[Magenta.js](https://style-transfer.glitch.me/) and [Neural storyteller model](https://github.com/ryankiros/neural-storyteller)
 
 P.S: I have only included the flask web app since the models are too large and have many dependencies to resolve for running on the local machine.
